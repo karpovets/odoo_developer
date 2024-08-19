@@ -24,6 +24,8 @@
                 <field name="garden_orientation"/>
                 <field name="state"/>
                 <field name="active"/>
+                <field name="property_type_id"/>
+                <field name="tag_ids"/>
             </tree>
         </field>
     </record>
@@ -38,9 +40,11 @@
                         <h1>
                             <field name="name"/>
                         </h1>
+                        <field name="tag_ids" widget="many2many_tags"/>
                     </div>
                     <group>
                         <group>
+                            <field name="property_type_id"/>
                             <field name="postcode"/>
                             <field name="date_availability"/>
                         </group>
@@ -63,6 +67,20 @@
                                 <field name="state"/>
                             </group>
                         </page>
+                        <page string="Offers">
+                            <field name="offer_ids">
+                                <tree>
+                                    <field name="price"/>
+                                    <field name="status"/>
+                                    <field name="partner_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Other info">
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
@@ -80,6 +98,7 @@
                 <field name="bedrooms"/>
                 <field name="living_area"/>
                 <field name="facades"/>
+                <field name="property_type_id"/>
 
                 <filter name="availabled" string="Available" domain="['|', ('state', '=', 'new'), ('state', '=', 'offer_received')]"/>
 

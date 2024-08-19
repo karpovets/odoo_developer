@@ -4,9 +4,31 @@
         name="Real Estate"
     />
     <menuitem
+        id="advertisements_menu"
+        name="Advertisements"
+        parent="real_estate_root_menu"
+    />
+    <menuitem
+        id="settings_menu"
+        name="Settings"
+        parent="real_estate_root_menu"
+    />
+    <menuitem
         id="property_ment_item"
         name="Properties"
-        parent="real_estate_root_menu"
+        parent="advertisements_menu"
         action="estate_property_action"
+    />
+    <menuitem
+        id="property_type_menu"
+        name="Property Types"
+        parent="settings_menu"
+        action="estate_property_type_action"
+    />
+    <menuitem
+        id="property_tag_menu"
+        name="Property Tags"
+        parent="settings_menu"
+        action="estate_property_tag_action"
     />
 </odoo>
