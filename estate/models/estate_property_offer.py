@@ -21,3 +21,15 @@ class EstatePropertyOffer(models.Model):
         for offer in self:
             date_create = offer.create_date if offer.create_date else datetime.today()
             offer.date_deadline = date_create + timedelta(days=offer.validity)
+
+
+    def action_offer_accepted(self):
+        for rec in self:
+            rec.status = 'accepted'
+            rec.property_id.buyer = rec.partner_id
+            rec.property_id.selling_price = rec.price
+
+
+    def action_offer_refused(self):
+        for rec in self:
+            rec.status = 'refused'  
