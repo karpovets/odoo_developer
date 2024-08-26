@@ -1,6 +1,7 @@
 from odoo import models, fields, api
 from datetime import datetime, timedelta
-from odoo.exceptions import UserError
+from odoo.exceptions import UserError, ValidationError
+from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 
 
 class EstateProperty(models.Model):
@@ -36,7 +37,7 @@ class EstateProperty(models.Model):
             ('offer_accepted', 'Offer Accepted'),
             ('sold', 'Sold'),
             ('canceled', 'Canceled')
-        ], required=1, copy=False, default='new')
+        ], required=1, copy=False, default='new', readonly=1)
     property_type_id = fields.Many2one('estate.property.type', string="Property Type")
     user_id = fields.Many2one('res.users', string='Salesmen', copy=False, default=lambda self: self.env.user)
     tag_ids = fields.Many2many('estate.property.tag', string='Tags')
@@ -85,3 +86,18 @@ class EstateProperty(models.Model):
             
             rec.state = 'canceled'
             
+
+
+    _sql_constraints = [
+         ('positive_expected_price', 'CHECK(expected_price > 0)', 'The expected_price should be greater than 0.'),
+         ('positive_selling_price', 'CHECK(selling_price > 0)', 'The selling_price should be greater than 0.'),
+         ('positive_best_price', 'CHECK(best_price > 0)', 'The best_price should be greater than 0.')
+    ]
+
+
+    @api.constrains('selling_price', 'expected_price')
+    def check_selling_price(self):
+        for prop in self:
+            proc_expected_price = (prop.selling_price / prop.expected_price) * 100
+            if (proc_expected_price < 90):
+                raise ValidationError('The selling price must be must be a least 90 proc of expected price')
