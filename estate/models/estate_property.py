@@ -7,6 +7,7 @@ from odoo.tools.float_utils import float_compare, float_is_zero, float_round
 class EstateProperty(models.Model):
     _name = 'estate.property'
     _description = "Estate Property"
+    _order = "id desc"
 
     def _default_date(self):
         return datetime.today() + timedelta(days=90)
@@ -99,5 +100,5 @@ class EstateProperty(models.Model):
     def check_selling_price(self):
         for prop in self:
             proc_expected_price = (prop.selling_price / prop.expected_price) * 100
-            if (proc_expected_price < 90):
+            if (proc_expected_price < 90 and prop.selling_price):
                 raise ValidationError('The selling price must be must be a least 90 proc of expected price')
