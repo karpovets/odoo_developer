@@ -1,5 +1,7 @@
 from odoo import models, fields, api
 from datetime import datetime, timedelta
+from odoo.tools import float_compare
+from odoo.exceptions import UserError
 
 class EstatePropertyOffer(models.Model):
     _name = 'estate.property.offer'
@@ -38,4 +40,17 @@ class EstatePropertyOffer(models.Model):
 
     def action_offer_refused(self):
         for rec in self:
-            rec.status = 'refused'  
+            rec.status = 'refused'
+
+
+
+    @api.model
+    def create(self, vals):
+        if vals.get("property_id") and vals.get("price"):
+            prop = self.env["estate.property"].browse(vals["property_id"])
+            if prop.offer_ids:
+                max_offer = max(prop.mapped("offer_ids.price"))
+                if (vals["price"] < max_offer):
+                    raise UserError("The offer must be higher than %.2f" % max_offer)
+            prop.state = "offer_received"
+        return super().create(vals)

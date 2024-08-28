@@ -34,7 +34,7 @@
         <field name="name">estate property form</field>
         <field name="model">estate.property</field>
         <field name="arch" type="xml">
-            <form create="1" edit="1" delete="0">
+            <form create="1" edit="1" delete="1">
                 <sheet>
                     <header>
                         <button name="action_sold" type="object" class="btn-success" string="Sold" invisible="state == 'sold' or state == 'canceled'"/>

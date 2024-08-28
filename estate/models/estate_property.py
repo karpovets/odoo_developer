@@ -102,3 +102,11 @@ class EstateProperty(models.Model):
             proc_expected_price = (prop.selling_price / prop.expected_price) * 100
             if (proc_expected_price < 90 and prop.selling_price):
                 raise ValidationError('The selling price must be must be a least 90 proc of expected price')
+            
+
+
+    def unlink(self):
+        for prop in self:
+            if (prop.state != 'canceled' and prop.state != 'new'):
+                raise UserError("Only new and canceled properties can be deleted.")
+            return super().unlink()
