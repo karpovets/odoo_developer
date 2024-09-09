@@ -4,6 +4,7 @@ from odoo import models, fields
 class HospitalPatient(models.Model):
     _name = 'hospital.patient'
     _description = "Hospital Patient"
+    _rec_name = 'full_name'
 
     full_name = fields.Char(required=1)
     gender = fields.Selection([

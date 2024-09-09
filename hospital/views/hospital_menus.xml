@@ -9,4 +9,16 @@
         parent="hospital_root_menu"
         action="hospital_patient_action"
     />
+    <menuitem
+        id="doctor_menu"
+        name="Doctors"
+        parent="hospital_root_menu"
+        action="hospital_doctor_action"
+    />
+    <menuitem
+        id="diagnosis_menu"
+        name="Diagnosis"
+        parent="hospital_root_menu"
+        action="hospital_diagnosis_action"
+    />
 </odoo>
