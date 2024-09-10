@@ -10,12 +10,17 @@
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree>
+                <field name="first_name"/>
+                <field name="last_name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="photo"/>
+                <field name="gender"/>
                 <field name="full_name"/>
-                <field name="gender" />
                 <field name="date_of_birth"/>
                 <field name="age"/>
                 <field name="passport_data"/>
-                <field name="contact_person"/>
+                <field name="contact_person_id"/>
             </tree>
         </field>
     </record>
@@ -26,18 +31,19 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <div class="oe_title">
-                        <h1>
-                            <field name="full_name"/>
-                        </h1>
-                    </div>
                     <group>
                         <group>
-                            <field name="gender" />
+                            <field name="first_name"/>
+                            <field name="last_name"/>
+                            <field name="phone"/>
+                            <field name="email"/>
+                            <field name="photo"/>
+                            <field name="gender"/>
+                            <field name="full_name"/>
                             <field name="date_of_birth"/>
                             <field name="age"/>
                             <field name="passport_data"/>
-                            <field name="contact_person"/>
+                            <field name="contact_person_id"/>
                         </group>
                     </group>
                 </sheet>

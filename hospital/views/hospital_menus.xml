@@ -21,4 +21,10 @@
         parent="hospital_root_menu"
         action="hospital_diagnosis_action"
     />
+    <menuitem
+        id="contact_person_menu"
+        name="Contact Person"
+        parent="hospital_root_menu"
+        action="hospital_contact_person_action"
+    />
 </odoo>
