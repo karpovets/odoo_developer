@@ -27,4 +27,21 @@
         parent="hospital_root_menu"
         action="hospital_contact_person_action"
     />
+    <menuitem
+        id="diseases_menu"
+        name="Diseases"
+        parent="hospital_root_menu"
+    />
+    <menuitem
+        id="diseases_categories_menu"
+        name="Categories"
+        parent="diseases_menu"
+        action="action_hospital_category_diseases"
+    />
+    <menuitem
+        id="diseases_items_menu"
+        name="Items"
+        parent="diseases_menu"
+        action="action_hospital_diseases"
+    />
 </odoo>
