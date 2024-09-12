@@ -18,6 +18,8 @@
                 <field name="gender"/>
                 <field name="full_name"/>
                 <field name="specialty"/>
+                <field name="intern"/>
+                <field name="doctor_mentor"/>
             </tree>
         </field>
     </record>
@@ -37,6 +39,8 @@
                             <field name="photo"/>
                             <field name="gender"/>
                             <field name="specialty"/>
+                            <field name="intern"/>
+                            <field name="doctor_mentor" invisible="intern == False" required="intern == True"/>
                             <field name="full_name"/>
                         </group>
                     </group>

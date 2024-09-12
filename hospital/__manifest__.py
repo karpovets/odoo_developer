@@ -15,7 +15,9 @@
         'views/hospital_diagnosis_views.xml',
         'views/hospital_contact_person_views.xml',
         'views/hospital_category_diseases_views.xml',
-        'views/hospital_diseases_views.xml'
+        'views/hospital_diseases_views.xml',
+        'views/hospital_visiting_doctor_views.xml',
+        'views/hospital_history_personal_doctor_views.xml'
     ],
     'application': True,
     'installable': True,

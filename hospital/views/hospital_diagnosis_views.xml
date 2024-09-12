@@ -15,6 +15,7 @@
                 <field name="disease"/>
                 <field name="treatment_plan"/>
                 <field name="date_diagnosis"/>
+                <field name="doctor_comment"/>
             </tree>
         </field>
     </record>
@@ -32,6 +33,7 @@
                             <field name="disease"/>
                             <field name="treatment_plan"/>
                             <field name="date_diagnosis"/>
+                            <field name="doctor_comment" invisible="doctor.intern == True"/>
                         </group>
                     </group>
                 </sheet>

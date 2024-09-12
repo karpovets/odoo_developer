@@ -14,3 +14,4 @@ class HospitalDiagnosis(models.Model):
     disease = fields.Char(required=1)
     treatment_plan = fields.Text(string="Prescribed treatment")
     date_diagnosis = fields.Date(copy=False, default=_default_date)
+    doctor_comment = fields.Text()

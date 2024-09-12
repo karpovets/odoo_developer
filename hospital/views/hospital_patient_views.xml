@@ -21,6 +21,7 @@
                 <field name="age"/>
                 <field name="passport_data"/>
                 <field name="contact_person_id"/>
+                <field name="hospital_personal_doctor"/>
             </tree>
         </field>
     </record>
@@ -44,10 +45,12 @@
                             <field name="age"/>
                             <field name="passport_data"/>
                             <field name="contact_person_id"/>
+                            <field name="hospital_personal_doctor"/>
                         </group>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
+
 </odoo>

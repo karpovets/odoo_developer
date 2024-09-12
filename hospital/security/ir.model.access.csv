@@ -6,3 +6,5 @@ access_hospital_contact_person,hospital.contact.person,model_hospital_contact_pe
 access_person_abstract,person.abstract,model_person_abstract,base.group_user,1,1,1,1
 access_hospital_category_diseases,hospital.category.diseases,model_hospital_category_diseases,base.group_user,1,1,1,1
 access_hospital_diseases,hospital.diseases,model_hospital_diseases,base.group_user,1,1,1,1
+access_hospital_visiting_doctor,hospital.visiting.doctor,model_hospital_visiting_doctor,base.group_user,1,1,1,1
+access_hospital_history_personal_doctor,hospital.history.personal.doctor,model_hospital_history_personal_doctor,base.group_user,1,1,1,1

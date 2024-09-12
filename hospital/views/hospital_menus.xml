@@ -44,4 +44,16 @@
         parent="diseases_menu"
         action="action_hospital_diseases"
     />
+    <menuitem
+        id="hospital_visiting_doctor_menu"
+        name="Hospital Visiting Doctor"
+        parent="hospital_root_menu"
+        action="hospital_visiting_doctor_action"
+    />
+    <menuitem
+        id="hospital_history_personal_doctor_menu"
+        name="Hospital History Personal Doctor"
+        parent="hospital_root_menu"
+        action="hospital_history_personal_doctor_action"
+    />
 </odoo>
