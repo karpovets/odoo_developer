@@ -7,3 +7,5 @@ from . import hospital_category_diseases
 from . import hospital_diseases
 from . import hospital_visiting_doctor
 from . import hospital_history_personal_doctor
+from . import hospital_research_type
+from . import hospital_research

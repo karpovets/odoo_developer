@@ -8,3 +8,5 @@ access_hospital_category_diseases,hospital.category.diseases,model_hospital_cate
 access_hospital_diseases,hospital.diseases,model_hospital_diseases,base.group_user,1,1,1,1
 access_hospital_visiting_doctor,hospital.visiting.doctor,model_hospital_visiting_doctor,base.group_user,1,1,1,1
 access_hospital_history_personal_doctor,hospital.history.personal.doctor,model_hospital_history_personal_doctor,base.group_user,1,1,1,1
+access_hospital_research_type,hospital.research.type,model_hospital_research_type,base.group_user,1,1,1,1
+access_hospital_research,hospital.research,model_hospital_research,base.group_user,1,1,1,1

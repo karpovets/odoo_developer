@@ -46,14 +46,26 @@
     />
     <menuitem
         id="hospital_visiting_doctor_menu"
-        name="Hospital Visiting Doctor"
+        name="Visiting Doctor"
         parent="hospital_root_menu"
         action="hospital_visiting_doctor_action"
     />
     <menuitem
         id="hospital_history_personal_doctor_menu"
-        name="Hospital History Personal Doctor"
+        name="History Personal Doctor"
         parent="hospital_root_menu"
         action="hospital_history_personal_doctor_action"
+    />
+    <menuitem
+        id="hospital_research_type_menu"
+        name="Research Type"
+        parent="hospital_root_menu"
+        action="hospital_research_type_action"
+    />
+    <menuitem
+        id="hospital_research_menu"
+        name="Research"
+        parent="hospital_root_menu"
+        action="hospital_research_action"
     />
 </odoo>
