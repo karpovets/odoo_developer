@@ -13,6 +13,9 @@
                 <field name="doctor"/>
                 <field name="patient"/>
                 <field name="visiting_date"/>
+                <field name="start_time"/>
+                <field name="end_time"/>
+                <field name="visit_occurred"/>
                 <field name="diseases"/>
                 <field name="notes"/>
             </tree>
@@ -30,8 +33,12 @@
                             <field name="doctor"/>
                             <field name="patient"/>
                             <field name="visiting_date"/>
+                            <field name="start_time"/>
+                            <field name="end_time"/>
+                            <field name="visit_occurred"/>
                             <field name="diseases"/>
                             <field name="notes"/>
+                            <field name="research_ids" widget="one2many_list"/>
                         </group>
                     </group>
                 </sheet>

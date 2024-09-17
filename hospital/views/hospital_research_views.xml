@@ -31,6 +31,8 @@
                         <field name="research_type_id"/>
                         <field name="sample"/>
                         <field name="conclusions"/>
+                        <field name="visit_id"/>
+                        <field name="diseases"/>
                     </group>
                 </sheet>
             </form>

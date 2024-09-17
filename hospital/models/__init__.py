@@ -9,3 +9,5 @@ from . import hospital_visiting_doctor
 from . import hospital_history_personal_doctor
 from . import hospital_research_type
 from . import hospital_research
+from . import hospital_sample_type
+from . import hospital_doctor_shedule

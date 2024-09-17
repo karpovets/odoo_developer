@@ -68,4 +68,16 @@
         parent="hospital_root_menu"
         action="hospital_research_action"
     />
+    <menuitem
+        id="hospital_sample_type_menu"
+        name="Sample Type"
+        parent="hospital_root_menu"
+        action="hospital_sample_type_action"
+    />
+    <menuitem
+        id="hospital_doctor_schedule_menu"
+        name="Doctor Schedule"
+        parent="hospital_root_menu"
+        action="hospital_doctor_schedule_action"
+    />
 </odoo>
